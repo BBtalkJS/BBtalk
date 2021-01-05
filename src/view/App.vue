@@ -20,9 +20,10 @@
 
 
 <script>
-import results from '../utils/results'
-
-
+import {getData} from '../utils' 
+const AV = require('leancloud-storage');
+const { Query } = AV
+const results = {}
 export default {
   
   data () {
@@ -33,11 +34,35 @@ export default {
     }
   },
   methods: {
-    async loadMore () {
+    getContent () {
+    console.log(this.$bbtalk.appId)
+    AV.init({
+        appId: this.$bbtalk.appId,
+        appKey: this.$bbtalk.appKey,
+        serverURLs: this.$bbtalk.serverURLs
+      });
+
+    var query = new AV.Query('content');
+       
+   
+    query.descending('createdAt').skip(0).limit(10).find().then(function (results) {
+      if (results.length == 0) {
+        alert('之前好久没哔哔过了')
+      } else {
+        
+       return results = results
+
+        }
+      }, 
+      function (error) { 
+      console.log(error)
+    });
+
+
     }
   },
   mounted () {
-    console.log(this.$bbtalk)
+    this.getContent()
   }
 
 }

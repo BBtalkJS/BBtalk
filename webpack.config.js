@@ -2,6 +2,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const webpack = require('webpack')
 const path = require('path');
 const version = require('./package.json').version
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin; 
 const banner =
   'BBtalk v' + version + '\n' +
   '(c) 2020-' + new Date().getFullYear() + ' Heson\n' +
@@ -29,7 +30,8 @@ module.exports = {
   },
   plugins: [
     new webpack.BannerPlugin(banner),
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new BundleAnalyzerPlugin()
   ]
 };
 

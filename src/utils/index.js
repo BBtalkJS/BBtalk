@@ -1,14 +1,15 @@
-import timeago from './timeago'
+import timeAgo from './timeAgo'
 import urlToLink from './urlToLink'
 import getData from './getData'
-
+import results from './results'
 
 
 
 
 
 export {
-    timeago,
+    results,
+    timeAgo,
     urlToLink,
     getData
 }

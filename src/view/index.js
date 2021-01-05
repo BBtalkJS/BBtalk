@@ -5,12 +5,10 @@ import App from './App.vue'
 
 const render = (options = {}) => {
   
-  
+  Vue.prototype.$bbtalk = options
   
   return new Vue({
-    beforeCreate: function () {
-      console.log(this.$bbtalk)
-    },
+    
 
     render: h => h(App)
   }).$mount(options.el || '#bbtalk')

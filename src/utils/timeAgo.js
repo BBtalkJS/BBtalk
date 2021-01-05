@@ -1,5 +1,5 @@
  //友好地显示时间
- function timeago(dateTimeStamp) { 
+ function timeAgo(dateTimeStamp) { 
      
     var result = '' 
     var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示 
@@ -40,4 +40,4 @@
 } 
 
 
-export default timeago
+export default timeAgo
