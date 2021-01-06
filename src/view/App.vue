@@ -22,11 +22,20 @@
 
 
 <script>
-import { getData, urlToLink, timeAgo } from "../utils";
+import { urlToLink, timeAgo } from "../utils";
 const AV = require("leancloud-storage");
-const { Query } = AV;
+var { Query } = AV;
+AV.init({
+        appId: '0KzOX4vC7Jsk6vzUGNeEiUaI-gzGzoHsz',
+        appKey: 'HwCiWuxfpvKiLm4teCUgTIba',
+        serverURLs: 'https://bbapi.heson10.com'
+      });
+
+      var query = new AV.Query("content");
+
 
 export default {
+
   data() {
     return {
       count: 0,
@@ -35,20 +44,13 @@ export default {
     };
   },
   methods: {
-    getContent() {
-      AV.init({
-        appId: this.$bbtalk.appId,
-        appKey: this.$bbtalk.appKey,
-        serverURLs: this.$bbtalk.serverURLs,
-      });
-
-      var query = new AV.Query("content");
+    getContent(page) {
+      
       const _this = this;
-      console.log(_this);
 
       query
         .descending("createdAt")
-        .skip(_this.page)
+        .skip(page * 10)
         .limit(10)
         .find()
         .then(
@@ -79,10 +81,12 @@ export default {
         }
       );
     },
-    loadMore() {},
+    loadMore() {
+      this.getContent(++this.page);
+    },
   },
   mounted() {
-    this.getContent();
+    this.getContent(this.page);
   },
 };
 </script>
