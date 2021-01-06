@@ -1,14 +1,14 @@
 <template>
   <main id="app">
     <p class="tip">共计发送 {{ count }} 条说说</p>
-    <div class="timenode" v-for="item in contents.results" v-cloak>
+    <div class="timenode" v-for="item in contents" v-cloak>
       <div class="meta">
         <p>
-          <time v-bind:datetime="item.createdAt">{{  item.createdAt }}</time>
+          <time v-bind:datetime="item.attributes.time">{{ item.attributes.time }}</time>
         </p>
       </div>
       <div class="body">
-        <p v-html="item.content"></p>
+        <p v-html="item.attributes.content"></p>
       </div>
     </div>
     <div class="load-ctn">
@@ -20,52 +20,68 @@
 
 
 <script>
-import {getData} from '../utils' 
-const AV = require('leancloud-storage');
-const { Query } = AV
-const results = {}
+import { getData,urlToLink,timeAgo } from "../utils";
+const AV = require("leancloud-storage");
+const { Query } = AV;
+
 export default {
-  
-  data () {
+  data() {
     return {
-      count:0,
-      page:0,
-      contents:results
-    }
+      count: 0,
+      page: 0,
+      contents: []
+    };
   },
   methods: {
-    getContent () {
-    console.log(this.$bbtalk.appId)
-    AV.init({
+    getContent() {
+      AV.init({
         appId: this.$bbtalk.appId,
         appKey: this.$bbtalk.appKey,
-        serverURLs: this.$bbtalk.serverURLs
+        serverURLs: this.$bbtalk.serverURLs,
       });
 
-    var query = new AV.Query('content');
-       
-   
-    query.descending('createdAt').skip(0).limit(10).find().then(function (results) {
-      if (results.length == 0) {
-        alert('之前好久没哔哔过了')
-      } else {
+      var query = new AV.Query("content");   
+      const _this = this
+      console.log(_this)
+
+      query
+        .descending("createdAt")
+        .skip(_this.page)
+        .limit(10)
+        .find()
+        .then(
+          function (res) {
+            if (res.length == 0) {
+              alert("之前好久没哔哔过了");
+            } else {
+
+             let resC = res;
+             resC.forEach((i) => {
+
+          let dateTmp = new Date(i.createdAt);
+
+          i.attributes.time = timeAgo(dateTmp);
+          i.attributes.content = urlToLink(i.attributes.content);
+          _this.contents.push(i)
+
+        })
+      }
+            }
+          ,
+          function (error) {
+            console.log(error);
+          }
+        );
         
-       return results = results
-
-        }
-      }, 
-      function (error) { 
-      console.log(error)
-    });
-
-
+    },
+    loadMore() {
+      
     }
   },
-  mounted () {
-    this.getContent()
-  }
-
-}
+  mounted() {
+    this.getContent();
+  },
+};
 </script>
 
 
