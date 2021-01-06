@@ -25,17 +25,8 @@
 import { urlToLink, timeAgo } from "../utils";
 const AV = require("leancloud-storage");
 var { Query } = AV;
-AV.init({
-        appId: '0KzOX4vC7Jsk6vzUGNeEiUaI-gzGzoHsz',
-        appKey: 'HwCiWuxfpvKiLm4teCUgTIba',
-        serverURLs: 'https://bbapi.heson10.com'
-      });
-
-      var query = new AV.Query("content");
-
-
+var query;
 export default {
-
   data() {
     return {
       count: 0,
@@ -45,7 +36,16 @@ export default {
   },
   methods: {
     getContent(page) {
-      
+      if (this.contents.length == 0) {
+        AV.init({
+          appId: this.$bbtalk.appId,
+          appKey: this.$bbtalk.appKey,
+          serverURLs: this.$bbtalk.serverURLs,
+        });
+
+        query = new AV.Query("content");
+      }
+
       const _this = this;
 
       query
