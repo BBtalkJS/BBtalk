@@ -1,7 +1,7 @@
 {
-  "name": "BBtalk",
-  "version": "0.0.1",
-  "description": "",
+  "name": "bbtalk",
+  "version": "0.1.0",
+  "description": "通过微信发布碎片化思想同步至博客。",
   "main": "./dist/bbtalk.js",
   "scripts": {
     "dev": "webpack-dev-server",
@@ -25,5 +25,13 @@
   "dependencies": {
     "leancloud-storage": "^4.5.3",
     "vue": "^2.6.11"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BBtalkJS/BBtalk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BBtalkJS/BBtalk/issues"
+  },
+  "homepage": "https://github.com/BBtalkJS/BBtalk#readme"
 }

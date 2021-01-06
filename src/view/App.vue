@@ -4,7 +4,9 @@
     <div class="timenode" v-for="item in contents" v-cloak>
       <div class="meta">
         <p>
-          <time v-bind:datetime="item.attributes.time">{{ item.attributes.time }}</time>
+          <time v-bind:datetime="item.attributes.time">{{
+            item.attributes.time
+          }}</time>
         </p>
       </div>
       <div class="body">
@@ -20,7 +22,7 @@
 
 
 <script>
-import { getData,urlToLink,timeAgo } from "../utils";
+import { getData, urlToLink, timeAgo } from "../utils";
 const AV = require("leancloud-storage");
 const { Query } = AV;
 
@@ -29,7 +31,7 @@ export default {
     return {
       count: 0,
       page: 0,
-      contents: []
+      contents: [],
     };
   },
   methods: {
@@ -40,9 +42,9 @@ export default {
         serverURLs: this.$bbtalk.serverURLs,
       });
 
-      var query = new AV.Query("content");   
-      const _this = this
-      console.log(_this)
+      var query = new AV.Query("content");
+      const _this = this;
+      console.log(_this);
 
       query
         .descending("createdAt")
@@ -54,29 +56,30 @@ export default {
             if (res.length == 0) {
               alert("之前好久没哔哔过了");
             } else {
-
-             let resC = res;
-             resC.forEach((i) => {
-
-          let dateTmp = new Date(i.createdAt);
-
-          i.attributes.time = timeAgo(dateTmp);
-          i.attributes.content = urlToLink(i.attributes.content);
-          _this.contents.push(i)
-
-        })
-      }
+              let resC = res;
+              resC.forEach((i) => {
+                let dateTmp = new Date(i.createdAt);
+                i.attributes.time = timeAgo(dateTmp);
+                i.attributes.content = urlToLink(i.attributes.content);
+                _this.contents.push(i);
+              });
             }
-          ,
+          },
           function (error) {
             console.log(error);
           }
         );
-        
+
+      query.count().then(
+        function (count) {
+          _this.count = count;
+        },
+        function (error) {
+          console.log(error);
+        }
+      );
     },
-    loadMore() {
-      
-    }
+    loadMore() {},
   },
   mounted() {
     this.getContent();
