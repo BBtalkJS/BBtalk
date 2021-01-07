@@ -1,8 +1,8 @@
 import { render } from './view'
 
-async function initAPP (options = {}) {
+async function init (options = {}) {
      
      render(options) 
 }
 
-export { initAPP }
+export { init }
