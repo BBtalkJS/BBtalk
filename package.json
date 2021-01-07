@@ -1,6 +1,6 @@
 {
   "name": "bbtalk",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "通过微信发布碎片化思想同步至博客。",
   "main": "./dist/bbtalk.js",
   "scripts": {

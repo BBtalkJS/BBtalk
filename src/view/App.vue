@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="load-ctn">
-      <a class="btn lv" v-on:click="loadMore" v-if="contents" v-cloak>再翻翻</a>
+      <a class="btn" v-on:click="loadMore" v-if="contents" v-cloak>再翻翻</a>
       <p class="tip" v-else>别急，加载呢</p>
     </div>
   </main>
@@ -233,22 +233,6 @@ div.timenode .body {
   background: #f6f6f6;
   display: inline-block;
 }
-
-/*bb暗黑样式*/
-.dark-mode .timenode meta p {
-  color: #fff;
-}
-.dark-mode .timenode p,
-.dark-mode .timenode li {
-  color: #555;
-}
-.dark-mode .timenode blockquote p {
-  color: #cfcfcf;
-}
-.dark-mode .timenode p a {
-  color: rgb(36, 122, 62);
-}
-.dark-mode .timenode .body {
-  background: #c4c4c4;
-}
+#app .load-ctn a{padding:8px 18px;background:#eaeded;border-radius:6px;color:#333}
+#app .load-ctn  {padding-top:30px;cursor:pointer;}
 </style>

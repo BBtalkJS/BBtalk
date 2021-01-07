@@ -4,3 +4,5 @@ db.json
 *.log
 node_modules/
 .deploy*/
+docs/.vuepress/dist
+deploy.sh
