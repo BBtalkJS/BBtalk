@@ -23,7 +23,7 @@
     "vuepress-theme-reco": "^1.6.1",
     "webpack": "^4.44.1",
     "webpack-bundle-analyzer": "^4.3.0",
-    "webpack-cli": "^4.3.0",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.1"
   },
   "dependencies": {
