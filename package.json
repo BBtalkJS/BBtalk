@@ -30,10 +30,7 @@
     "leancloud-storage": "^4.5.3",
     "vue": "^2.6.11"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BBtalkJS/BBtalk.git"
-  },
+  "repository": "git+https://github.com/BBtalkJS/BBtalk.git",
   "bugs": {
     "url": "https://github.com/BBtalkJS/BBtalk/issues"
   },
