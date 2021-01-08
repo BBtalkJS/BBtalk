@@ -12,7 +12,7 @@ BBtalk 利用手机微信发布碎片化思想同步至博客，基于 Leancloud
 因为国际版的 LeanCloud 不需要绑定**备案域名**，所以推荐使用国际版。
 :::
 
-1. 前往 [LeanCloud 国内版](https://LeanCloud.app/)，注册账号。
+1. 前往 [LeanCloud 国际版](https://LeanCloud.app/)，注册账号。
 2. 注册完成之后根据 LeanCloud 的提示绑定手机号和邮箱。
 3. 绑定完成之后点击`创建应用`，应用名称随意，接着在`存储`→`结构化数据`中创建 `class`，命名为 `content`。
 4. 点击刚刚创建的`content` Class，点击`添加列`并创建名称为`content`的`列`。
