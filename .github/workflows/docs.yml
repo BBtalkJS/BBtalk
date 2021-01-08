@@ -16,6 +16,6 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           TARGET_REPO: BBtalkJS/BBtalkJS.github.io
           TARGET_BRANCH: master
-          BUILD_SCRIPT: yarn && yarn docs:build
+          BUILD_SCRIPT: npm && npm run docs:build
           BUILD_DIR: docs/.vuepress/dist
           CNAME: bb.js.org
