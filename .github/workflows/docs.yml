@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: jenkey2011/vuepress-deploy@ecff9f2
         env:
-          ACCESS_TOKEN: ${{ secrets.DOCS_GH_PAGES_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           TARGET_REPO: BBtalkJS/BBtalkJS.github.io
           TARGET_BRANCH: master
           BUILD_SCRIPT: yarn && yarn docs:build
