@@ -6,8 +6,12 @@ jobs:
   publish-docs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: jenkey2011/vuepress-deploy@ecff9f2
+      - name: Checkout
+        uses: actions/checkout@master
+
+
+      - name: vuepress-deploy
+        uses: jenkey2011/vuepress-deploy@ecff9f2
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           TARGET_REPO: BBtalkJS/BBtalkJS.github.io
