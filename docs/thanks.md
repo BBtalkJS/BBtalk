@@ -19,4 +19,4 @@ title: 鸣谢
 
 :::
 
-> 这个平台也是个人所搭，精力有限。如有错误，欢迎[PR](https://github.com/BBtalkJS/BBtalk/edit/main/docs/thanks.md)
+> 如有错误，欢迎[PR](https://github.com/BBtalkJS/BBtalk/edit/main/docs/thanks.md)
