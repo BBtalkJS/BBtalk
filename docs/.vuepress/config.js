@@ -14,6 +14,7 @@ module.exports = {
       { text: '鸣谢', link: '/thanks' },
       { text: '示例页面', link: 'https://www.heson10.com/bb/' }
     ],
+    sidebarDepth:3,
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
     sidebar: [
