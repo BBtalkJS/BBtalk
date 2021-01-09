@@ -30,11 +30,6 @@ BBtalk 利用手机微信发布碎片化思想同步至博客，基于 Leancloud
   ```
   //bindCurrentUser:您的AppID,您的MasterKey,https://您的 Request 域名
   ```
-:::warning 为什么选择 “黑石哔哔” ？
-公众号发文平台可以通过源码直接搭建,具体参考[BBtalk的前世今生](/thanks.html#bbtalk-%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F)，“黑石哔哔”当前支持图片直发功能。
-
-如果有更好的发文平台，欢迎[PR](https://github.com/BBtalkJS/BBtalk/edit/main/docs/quick-start.md)推荐。
-:::
 ### CDN引用
 ::: tip 提示
 如果您使用的博客主题不支持 BBtalk，并且您不知道如何引入 BBtalk，您可以[在 Github 提交适配请求](https://github.com/BBtalkJS/BBtalk/issues/new)
