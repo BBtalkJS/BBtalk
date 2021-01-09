@@ -14,14 +14,10 @@ module.exports = {
       { text: '鸣谢', link: '/thanks' },
       { text: '示例页面', link: 'https://www.heson10.com/bb/' }
     ],
-    sidebarDepth:3,
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
     sidebar: [
-      ['/quick-start', '使用文档'],
-      ['/hexo', '在HEXO中使用'],
-      ['/typecho', '在Typecho中使用'],
-      ['/thanks','鸣谢']
+      ['/quick-start', '快速上手']
 
     ],
     logo: 'https://7.dusays.com/2021/01/06/fa6c411a0c660.png',

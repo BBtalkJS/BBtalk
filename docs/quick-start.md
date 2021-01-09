@@ -1,9 +1,21 @@
-## 前言
+## 📃前言
 :::tip 什么是BBtalk？
 BBtalk 利用手机微信发布碎片化思想同步至博客，基于 Leancloud。
 :::
 
-## 开始使用
+## 🚀快速使用
+### 在 Hexo Volantis 主题使用
+Volantis 目前支持 BBtalk ，请查看[hexo-theme-volantis/_config.yml](https://github.com/volantis-x/hexo-theme-volantis/blob/master/_config.yml#L618-L623)
+```yml
+  # BBtalk https://bb.js.org
+  bbtalk:
+    js: https://cdn.jsdelivr.net/npm/bbtalk@0.1.5/dist/bbtalk.min.js # BBtalk.js
+    appId: xxxxxx # your appID
+    appKey: xxxxx # your appKEY
+    serverURLs: https://xxxxxx # Request Api 域名
+```
+
+## 🎨开始使用
 ### Leancloud 创建存储空间
 :::warning 提示
 

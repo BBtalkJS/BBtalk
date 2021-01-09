@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: https://7.dusays.com/2021/01/06/fa6c411a0c660.png
-actionText: 使用文档 →
+actionText: 快速上手 →
 actionLink: /quick-start/
 features:
 - title: 📲随时发送
