@@ -19,4 +19,4 @@ title: 鸣谢
 
 :::
 
-> 如有错误，欢迎[PR](https://github.com/BBtalkJS/BBtalk/edit/main/docs/thanks.md)
+> 收录一切关于哔哔的文章，欢迎[PR](https://github.com/BBtalkJS/BBtalk/edit/main/docs/thanks.md)
