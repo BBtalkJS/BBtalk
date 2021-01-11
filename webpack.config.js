@@ -2,7 +2,8 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const webpack = require('webpack')
 const path = require('path');
 const version = require('./package.json').version
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin; 
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin; 
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const banner =
   'BBtalk v' + version + '\n' +
   '(c) 2020-' + new Date().getFullYear() + ' Heson\n' +
@@ -30,8 +31,9 @@ module.exports = {
   },
   plugins: [
     new webpack.BannerPlugin(banner),
-    new VueLoaderPlugin(),
-    new BundleAnalyzerPlugin()
+    new VueLoaderPlugin()
+    // new BundleAnalyzerPlugin(),
+
   ]
 };
 

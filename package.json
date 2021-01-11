@@ -1,6 +1,6 @@
 {
   "name": "bbtalk",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "通过微信发布碎片化思想同步至博客。",
   "main": "./dist/bbtalk.js",
   "scripts": {
@@ -17,6 +17,7 @@
   "devDependencies": {
     "css-loader": "^5.0.1",
     "style-loader": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "vue-loader": "^15.9.6",
     "vue-template-compiler": "^2.6.12",
     "vuepress": "^1.7.1",

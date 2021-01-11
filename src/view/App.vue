@@ -45,13 +45,13 @@ export default {
 
         query = new AV.Query("content");
       }
-
+      var pageSize = this.$bbtalk.pageSize
       const _this = this;
 
       query
         .descending("createdAt")
-        .skip(page * 10)
-        .limit(10)
+        .skip(page * (pageSize || 10))
+        .limit(pageSize || 10)
         .find()
         .then(
           function (res) {
