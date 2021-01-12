@@ -17,6 +17,8 @@ title: 鸣谢
 
 [黑石哔哔支持微信直发图片功能](https://www.heson10.com/posts/61220.html) 再次折腾，微信公众号能直接发图。
 
+[「哔哔点啥」微信公众号 2.0](https://immmmm.com/bb-by-wechat-pro/) 哔哔「腾讯 CloudBase」版。
+
 :::
 
 > 收录一切关于哔哔的文章，欢迎[PR](https://github.com/BBtalkJS/BBtalk/edit/main/docs/thanks.md)
