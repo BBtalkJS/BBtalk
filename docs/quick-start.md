@@ -46,6 +46,7 @@ Volantis 目前支持 BBtalk ，请查看[hexo-theme-volantis/_config.yml](https
   ```
   //leancloud:您的AppID,您的MasterKey,https://您的 Request 域名
   ```
+  > `黑石哔哔`已支持绑定至腾讯云cloudbase，通过`//tcb:apiKey,apiUrl`进行绑定，前端页面正在重构，敬请期待。
 ### CDN引用
 ::: tip 提示
 如果您使用的博客主题不支持 BBtalk，并且您不知道如何引入 BBtalk，您可以[在 Github 提交适配请求](https://github.com/BBtalkJS/BBtalk/issues/new)
