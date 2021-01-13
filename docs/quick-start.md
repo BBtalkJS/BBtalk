@@ -44,7 +44,7 @@ Volantis 目前支持 BBtalk ，请查看[hexo-theme-volantis/_config.yml](https
   按照公众号的提示的命令进行绑定：
 
   ```
-  //bindCurrentUser:您的AppID,您的MasterKey,https://您的 Request 域名
+  //leancloud:您的AppID,您的MasterKey,https://您的 Request 域名
   ```
 ### CDN引用
 ::: tip 提示
